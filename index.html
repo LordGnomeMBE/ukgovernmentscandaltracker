@@ -83,6 +83,13 @@ body {
   font-family:verdana;
   padding: 10px;
 }
+  .statsDiv {
+  background-color: black;
+  width: 85vw;
+  border: 3px solid black;
+  padding: 10px;
+  margin: 20px;
+}
 </style>
 
 <body>
@@ -115,7 +122,7 @@ If I've missed something, please email bulwark_bike_0n@icloud.com so I can add i
 
  <h1 style="font-size:30px"style="font-family:verdana;"><label id="text"style="color:white;"><center>
 sᴛᴀᴛɪsᴛɪᴄs</center></label></h1>
-
+<center><div class="statsDiv">
 <script type = "text/javascript" >
   
 var one_day = 1000 * 60 * 60 * 24
@@ -140,7 +147,7 @@ var perdays = Result.toFixed(0);
   
 document.write("<p2><center>In the " + Final_Result + " days since Liz Truss became Prime Minister, there's been " + scandals + " scandals. This means the scandal-o-meter shows a rate of " + perday + " per day, " + perweek + " per week, or " + permonth + " per month." + "</center></p2>");
 </script>
-  
+  </div>
 <hr style="height:2px;border-width:0;color:white;background-color:white">
 
 <hr style="height:2px;border-width:0;color:white;background-color:white">
