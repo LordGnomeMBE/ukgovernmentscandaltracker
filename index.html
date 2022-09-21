@@ -59,6 +59,12 @@ a:active {
 body {
   background-color: black;
 }
+  p2 {
+  color: white;
+  font-size:22px;
+  font-family:verdana;
+  padding: 10px;
+}
 </style>
 
 <body>
@@ -95,15 +101,32 @@ sᴛᴀᴛɪsᴛɪᴄs</center></label></h1>
 <p>
 <center><p id="scandalometer"style="color:white;font-size:22px;font-family:verdana;"></p></center>
 
-<script>
-let days = "14", 
-scandals = 3, 
-perday = scandals/days;
-perweek = perday*7;
-permonth = perday*30;
+<script type = "text/javascript" >
+  
+var one_day = 1000 * 60 * 60 * 24
+  
+var present_date = new Date();
+  
+var Truss_day = new Date(present_date.getFullYear(), 9, 6)
+    
+var Result = Math.round(Truss_day.getTime() - present_date.getTime()) / (one_day);
+  
+var Final_Result = Result.toFixed(0);
 
-document.getElementById("scandalometer").innerHTML = "In the " + days  + " days since Liz Truss became PM, there's been " + scandals + " scandals, meaning the scandal-o-meter shows a rate of " + perday + " per day, " + perweek + " per week, or " + permonth + " per month.";
+let scandals = 3, 
+perday = scandals/Final_Result;
+perday = +perday.toFixed(2);
+perweek = perday*7;
+perweek = +perweek.toFixed(2);
+permonth = perday*30;
+permonth = +permonth.toFixed(2);
+
+var perdays = Result.toFixed(0);
+  
+//To display the final_result value
+document.write("<p2><center>In the " + Final_Result + " days since Liz Truss became Prime Minister, there's been " + scandals + " scandals. This means the scandal-o-meter shows a rate of " + perday + " per day, " + perweek + " per week, or " + permonth + " per month." + "</center></p2>");
 </script>
+  
 <hr style="height:2px;border-width:0;color:white;background-color:white">
 
 <hr style="height:2px;border-width:0;color:white;background-color:white">
